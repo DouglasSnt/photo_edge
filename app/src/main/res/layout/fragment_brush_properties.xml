@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_3"
+    android:padding="8dp"
+    tools:background="@color/empty">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        style="@style/MaterialButton"
+        android:layout_width="54dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_rounded_left"
+        android:clickable="false"
+        android:foregroundGravity="left"
+        android:paddingStart="0dp"
+        android:paddingEnd="13dp"
+        android:src="@drawable/ic_tool_size"
+        app:layout_constraintBottom_toBottomOf="@id/constraints_tool_sizes"
+        app:layout_constraintEnd_toEndOf="@id/constraints_tool_sizes"
+        app:layout_constraintTop_toTopOf="@id/constraints_tool_sizes" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraints_tool_sizes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/less_btn"
+            style="@style/MaterialButton"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:background="@drawable/background_rounded_top"
+            android:src="@drawable/ic_less"
+            app:layout_constraintBottom_toTopOf="@id/tool_size_tv"
+            app:layout_constraintEnd_toEndOf="@id/tool_size_tv"
+            app:layout_constraintStart_toStartOf="@id/tool_size_tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tool_size_tv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/lighter_gray"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/less_btn"
+            tools:text="99" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/add_btn"
+            style="@style/MaterialButton"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:background="@drawable/background_rounded_bottom"
+            android:src="@drawable/ic_add"
+            app:layout_constraintEnd_toEndOf="@id/tool_size_tv"
+            app:layout_constraintStart_toStartOf="@id/tool_size_tv"
+            app:layout_constraintTop_toBottomOf="@id/tool_size_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/selected_color_preview"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_rounded_4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraints_tool_sizes" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_hue_bar"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/frame_saturation_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selected_color_preview">
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/hue_color_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:rotation="90"
+            app:hslColoringMode="pure"
+            app:hslMode="hue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_saturation_bar"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/frame_lightness_bar"
+        app:layout_constraintStart_toEndOf="@id/frame_hue_bar"
+        app:layout_constraintTop_toBottomOf="@id/selected_color_preview">
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/saturation_color_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:rotation="90"
+            app:hslColoringMode="pure"
+            app:hslMode="saturation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_lightness_bar"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/frame_saturation_bar"
+        app:layout_constraintTop_toBottomOf="@id/selected_color_preview">
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/lightness_color_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:rotation="90"
+            app:hslColoringMode="pure"
+            app:hslMode="lightness"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

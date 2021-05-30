@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="8dp">
+
+    <ScrollView
+        android:id="@+id/tool_bar_scroll"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/save_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_save"
+                android:tooltipText="@string/save_project"
+                app:layout_constraintBottom_toTopOf="@id/crop_box_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/crop_box_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_crop"
+                android:tooltipText="@string/crop"
+                app:layout_constraintBottom_toTopOf="@id/transformation_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/transformation_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_transformation"
+                android:tooltipText="@string/transform_layer"
+                app:layout_constraintBottom_toTopOf="@id/export_image_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/export_image_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_export"
+                android:tooltipText="@string/export_image"
+                app:layout_constraintBottom_toTopOf="@id/import_image_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/import_image_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_image"
+                android:tooltipText="@string/import_image"
+                app:layout_constraintBottom_toTopOf="@id/blur_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/blur_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_blur"
+                android:tooltipText="@string/blur"
+                app:layout_constraintBottom_toTopOf="@id/layer_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/layer_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_layers"
+                android:tooltipText="@string/layers"
+                app:layout_constraintBottom_toTopOf="@id/zoom_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/zoom_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_zoom"
+                android:tooltipText="@string/zoom_panning"
+                app:layout_constraintBottom_toTopOf="@id/redo_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/redo_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_redo"
+                android:tooltipText="@string/redo"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/undo_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/undo_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_undo"
+                android:tooltipText="@string/undo"
+                app:layout_constraintBottom_toTopOf="@id/eraser_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/eraser_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_eraser"
+                android:tooltipText="@string/eraser"
+                app:layout_constraintBottom_toTopOf="@id/brush_tool_btn"
+                app:layout_constraintStart_toStartOf="@id/brush_tool_btn" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/brush_tool_btn"
+                style="@style/MaterialButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/default_button_background"
+                android:src="@drawable/ic_brush"
+                android:tooltipText="@string/brush"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

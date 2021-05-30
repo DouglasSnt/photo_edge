@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/empty"
+    android:padding="16dp"
+    android:theme="@style/AppTheme">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_pattern"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/canvas_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/canvas_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/empty"
+        app:layout_constraintBottom_toTopOf="@id/canvas_view"
+        app:layout_constraintEnd_toEndOf="@id/canvas_view"
+        app:layout_constraintStart_toStartOf="@id/canvas_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/canvas_view"
+        app:layout_constraintStart_toStartOf="@id/canvas_view"
+        app:layout_constraintTop_toBottomOf="@id/canvas_view" />
+
+    <com.example.photoedge.ui.customview.MyCanvas
+        android:id="@+id/canvas_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.photoedge.ui.customview.TransformationView
+        android:id="@+id/transformation_area_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/canvas_view"
+        app:layout_constraintEnd_toEndOf="@id/canvas_view"
+        app:layout_constraintStart_toStartOf="@id/canvas_view"
+        app:layout_constraintTop_toTopOf="@id/canvas_view" />
+
+    <com.example.photoedge.ui.customview.CropView
+        android:id="@+id/crop_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/canvas_view"
+        app:layout_constraintEnd_toEndOf="@id/canvas_view"
+        app:layout_constraintStart_toStartOf="@id/canvas_view"
+        app:layout_constraintTop_toTopOf="@id/canvas_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PhotoEdge" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/light_gray</item>
+        <item name="colorOnPrimary">@color/dark_gray</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primary_green</item>
+        <item name="colorSecondaryVariant">@color/secondary_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/font_samsung_one</item>
+    </style>
+
+    <style name="Theme.PhotoEdge.TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryDark">@color/dark_gray</item>
+        <item name="colorAccent">@color/primary_blue</item>
+        <item name="android:fontFamily">@font/font_samsung_one</item>
+    </style>
+
+    <style name="Theme.PhotoEdge.Dialog" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/font_samsung_one</item>
+    </style>
+</resources>

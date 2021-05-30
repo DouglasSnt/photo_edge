@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.PhotoEdge">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="MaterialButton" parent="AppTheme">
+        <item name="android:tint">@color/dark_gray</item>
+    </style>
+
+    <style name="MaterialButton.Danger" parent="MaterialButton">
+        <item name="android:tint">@color/white</item>
+        <item name="backgroundTint">@color/red_cancel</item>
+    </style>
+
+    <style name="MaterialButton.Success" parent="MaterialButton">
+        <item name="android:tint">@color/white</item>
+        <item name="backgroundTint">@color/green_confirm</item>
+    </style>
+
+    <style name="TextView" parent="AppTheme">
+        <item name="android:fontFamily">@font/font_samsung_one</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">textStart</item>
+
+    </style>
+
+    <style name="TextView.title" parent="TextView">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+</resources>

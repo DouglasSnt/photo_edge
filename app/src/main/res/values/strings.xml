@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Photo Edge</string>
+    <string name="free">Livre</string>
+    <string name="no_projects_found">Nenhum projeto por enquanto</string>
+    <string name="image_saved">Imagem salva na galeria</string>
+    <string name="preview">Prévia</string>
+    <string name="create_project_invalid_width">A largura deve ser entre %d e %d</string>
+    <string name="create_project_invalid_height">A altura deve ser entre %d e %d</string>
+    <string name="new_project">NOVO\nPROJETO</string>
+    <string name="load_project">CARREGAR\nPROJETO</string>
+    <string name="version">Versão:</string>
+    <string name="project_name">Nome do projeto</string>
+    <string name="width">Largura</string>
+    <string name="_1280">1280</string>
+    <string name="height">Altura</string>
+    <string name="_720">720</string>
+    <string name="select_image">Selecionar imagem</string>
+    <string name="brush">Pincel</string>
+    <string name="eraser">Borracha</string>
+    <string name="undo">Desfazer</string>
+    <string name="redo">Refazer</string>
+    <string name="zoom_panning">Zoom / Panning</string>
+    <string name="layers">Camadas</string>
+    <string name="blur">Desfoque</string>
+    <string name="import_image">Importar imagem</string>
+    <string name="export_image">Exportar imagem</string>
+    <string name="transform_layer">Transformar camada</string>
+    <string name="crop">Recorte</string>
+    <string name="save_project">Salvar projeto</string>
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    tools:background="@color/empty">
+
+    <View
+        android:id="@+id/thumb_preview_border"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/background_rounded_4dp"
+        app:layout_constraintBottom_toBottomOf="@id/delete_layer_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layer_visibility_btn" />
+
+    <ImageView
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/transparent_small"
+        app:layout_constraintBottom_toBottomOf="@id/thumb_preview_border"
+        app:layout_constraintEnd_toEndOf="@id/thumb_preview_border"
+        app:layout_constraintStart_toStartOf="@id/thumb_preview_border"
+        app:layout_constraintTop_toTopOf="@id/thumb_preview_border" />
+
+    <ImageView
+        android:id="@+id/layer_thumb_preview"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/thumb_preview_border"
+        app:layout_constraintEnd_toEndOf="@id/thumb_preview_border"
+        app:layout_constraintStart_toStartOf="@id/thumb_preview_border"
+        app:layout_constraintTop_toTopOf="@id/thumb_preview_border"
+        tools:background="@color/empty"
+        tools:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/layer_visibility_btn"
+        style="@style/MaterialButton"
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_rounded_4dp"
+        android:src="@drawable/ic_visibility_on"
+        app:layout_constraintBottom_toTopOf="@id/delete_layer_btn"
+        app:layout_constraintStart_toEndOf="@id/thumb_preview_border"
+        app:layout_constraintTop_toTopOf="@id/constraints_tool_sizes" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/delete_layer_btn"
+        style="@style/MaterialButton"
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/background_rounded_4dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@id/constraints_tool_sizes"
+        app:layout_constraintStart_toEndOf="@id/thumb_preview_border"
+        app:layout_constraintTop_toBottomOf="@id/layer_visibility_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/tool_decoration"
+        style="@style/MaterialButton"
+        android:layout_width="36dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/background_rounded_left"
+        android:clickable="false"
+        android:foregroundGravity="left"
+        android:paddingBottom="16dp"
+        android:src="@drawable/ic_opacity"
+        app:layout_constraintBottom_toBottomOf="@id/constraints_tool_sizes"
+        app:layout_constraintEnd_toStartOf="@id/constraints_tool_sizes"
+        app:layout_constraintStart_toEndOf="@id/layer_visibility_btn"
+        app:layout_constraintTop_toTopOf="@id/constraints_tool_sizes" />
+
+    <TextView
+        android:id="@+id/layer_opacity_tv"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tool_decoration"
+        app:layout_constraintEnd_toEndOf="@id/tool_decoration"
+        app:layout_constraintStart_toStartOf="@id/tool_decoration"
+        tools:text="99" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraints_tool_sizes"
+        android:layout_width="28dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/delete_layer_btn"
+        app:layout_constraintStart_toEndOf="@id/tool_decoration"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/less_btn"
+            style="@style/MaterialButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_rounded_tr"
+            android:src="@drawable/ic_less"
+            app:layout_constraintBottom_toTopOf="@id/add_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/add_btn"
+            style="@style/MaterialButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_rounded_br"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/less_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/layer_to_up"
+        style="@style/MaterialButton"
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_rounded_4dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@id/delete_layer_btn"
+        app:layout_constraintStart_toEndOf="@id/constraints_tool_sizes"
+        app:layout_constraintTop_toTopOf="@id/constraints_tool_sizes" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/layer_to_down"
+        style="@style/MaterialButton"
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_rounded_4dp"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintStart_toEndOf="@id/constraints_tool_sizes"
+        app:layout_constraintTop_toBottomOf="@id/layer_to_up" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraints_tool_sizes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

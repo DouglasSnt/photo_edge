@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/empty">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/create_from_image_constraints"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/create_preview_constraints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/menu_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#777"
+            app:tintMode="add" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/gradient_vertical"
+            android:backgroundTint="@color/white"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_project_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="32dp"
+            android:theme="@style/Theme.PhotoEdge.TextInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_project_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/project_name"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:padding="0dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_project_width"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:theme="@style/Theme.PhotoEdge.TextInput"
+            app:layout_constraintEnd_toStartOf="@id/layout_project_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_project_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_project_width"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/width"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:text="@string/_1280" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_project_height"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="number"
+            android:theme="@style/Theme.PhotoEdge.TextInput"
+            app:layout_constraintEnd_toStartOf="@id/ratio_spinner"
+            app:layout_constraintStart_toEndOf="@id/layout_project_width"
+            app:layout_constraintTop_toBottomOf="@id/layout_project_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_project_height"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/height"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:text="@string/_720" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_rounded_4dp_stroke"
+            android:backgroundTint="@color/light_gray"
+            android:backgroundTintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="@id/ratio_spinner"
+            app:layout_constraintEnd_toEndOf="@id/ratio_spinner"
+            app:layout_constraintStart_toStartOf="@id/ratio_spinner"
+            app:layout_constraintTop_toTopOf="@id/ratio_spinner" />
+
+        <Spinner
+            android:id="@+id/ratio_spinner"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:dropDownWidth="150dp"
+            app:layout_constraintBottom_toBottomOf="@id/layout_project_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/layout_project_height" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_from_image_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/primary_blue"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/select_image"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/cancel_create_from_image_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_project_width" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/cancel_create_from_image_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/background_rounded_4dp"
+            android:backgroundTint="@color/red_cancel"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_project_width" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/create_preview_constraints"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ratio_template_constraints"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/preview"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@id/ratio_template"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_pattern"
+                app:layout_constraintBottom_toBottomOf="@id/ratio_template"
+                app:layout_constraintEnd_toEndOf="@id/ratio_template"
+                app:layout_constraintStart_toStartOf="@id/ratio_template"
+                app:layout_constraintTop_toTopOf="@id/ratio_template" />
+
+            <com.example.photoedge.ui.customview.TemplateRatioView
+                android:id="@+id/ratio_template"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded_4dp"
+                android:backgroundTint="@color/transparent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_height="200dp"
+                tools:layout_width="300dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_project_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary_blue"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_check"
+        app:fabCustomSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

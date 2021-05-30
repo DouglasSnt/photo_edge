@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white">
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/white" />
+                    <padding
+                        android:bottom="4dp"
+                        android:left="4dp"
+                        android:right="4dp"
+                        android:top="4dp" />
+                    <corners android:radius="10dp" />
+                    <solid android:color="@color/transparent_3" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/background_main_menu_decoration_1" />
+        </layer-list>
+    </item>
+</ripple>

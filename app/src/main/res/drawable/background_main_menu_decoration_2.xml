@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="400"
+    android:viewportHeight="400">
+    <path
+        android:fillColor="@color/gradient_menu_item_2"
+        android:pathData="M0,320 C100,330 190,300 150,235C250,165 300,250 400,180
+        L400,385 C400,385 400,400 385,400
+        L15,400 C15,400 0,400, 0,385z" />
+    <path
+        android:pathData="M1.5,320 C100,330 190,300 150,235C250,165 300,250 398.5,180
+        L398.5,385 C398.5,385 398.5,398.5 385,398.5
+        L15,398.5 C15,398.5 1.5,398.5, 1.5,385z"
+        android:strokeWidth="3"
+        android:strokeColor="@color/white" />
+
+</vector>
+

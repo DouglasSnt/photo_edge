@@ -1,0 +1,3 @@
+rootProject.name = "Photo Edge"
+include ':app'
+include ':opencv'
