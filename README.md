@@ -25,7 +25,7 @@ Abrir o projeto pelo Android Studio
 
 > File -> Open -> Caminho do projeto -> photo_edge
 
-No arquivo `Settings.gradle` deletar a linha `include ':opencv`
+No arquivo `Settings.gradle` deletar a linha `include ':opencv'`
 
 Fazer o download do OpenCV para android através do link
 
@@ -51,7 +51,7 @@ Fazer o Build
 [Douglas dos Santos Rocha](https://github.com/DouglasSnt)
 
 ## Nota
-Este projeto é uma atribuição da universidade [Universidade São Francisco](https://www.usf.edu.br/).
+Este projeto é uma atribuição da [Universidade São Francisco](https://www.usf.edu.br/).
 
 ## License
 ```
